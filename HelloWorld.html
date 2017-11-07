@@ -1,24 +1,42 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-    </head>
-    <body>
-        <script type="text/javascript" src="HelloWorld.js"></script>
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<script type="text/javascript" src="HelloWorld.js"></script>
 
-        <div id="app">
-            <h1>{{message}}</h1>
-            </div>
+		<div id="app">
+			<h1>{{message}}</h1>
+			</div>
+			<p id="sample">サンプル</p>
+			<input type = "button" id="test1" value = "なんでもない" onclick = "fadeOut();"/>
+			<input type = "button" class="test2" value = "濃くなる" onclick = "fadeIn();"/>
+		<div >
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+<script>
 
-            <input type = "button" value = "なんでもない" onclick = "fadeOut();"/>
-            <input type = "button" value = "濃くなる" onclick = "fadeIn();"/>
+$(function() {
+	var test_1 ="";
+	var test_2 = "";
+    test_1 = $("#test1").val();
+	test_2 = $(".test2").val();
 
-            
+	console.log(test_1);
+});
 
-        <div >
-              
+$(function() {
+    var w = $(window).width();
+    var x = 500;
+    if (w <= x) {
+        $('#sample').css({
+            color: 'red'
+        });
+    }
+});
 
-    </body>
+</script>
+</body>
 </html>
 
 
